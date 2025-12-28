@@ -4,7 +4,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {/* Navigation Bar */}
+       
         <nav style={navStyle}>
           <div style={{ fontWeight: "bold", fontSize: "1.2rem" }}>SnippetManager</div>
           <div style={{ display: "flex", gap: "20px" }}>
@@ -16,14 +16,14 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         
-        {/* Page Content */}
+       
         {children}
       </body>
     </html>
   );
 }
 
-// Defining the missing styles to fix the ReferenceError
+
 const navStyle = {
   display: "flex",
   justifyContent: "space-between",

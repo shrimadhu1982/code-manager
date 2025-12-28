@@ -7,14 +7,14 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
 
   return (
-    /* This main tag is what handles the centering */
+  
     <main className="min-h-screen w-full flex items-center justify-center bg-[#0f172a] p-4">
       
-      {/* Background Glow */}
+      
       <div className="absolute w-72 h-72 bg-blue-600/20 blur-[100px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="relative z-10 w-full max-w-[400px]">
-        {/* Logo */}
+      
         <div className="flex flex-col items-center mb-8">
           <div className="p-3 bg-blue-600 rounded-2xl mb-4 shadow-xl shadow-blue-900/40">
             <LockKeyhole className="text-white" size={28} />
@@ -22,7 +22,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold text-white tracking-tight">SnippetVault</h1>
         </div>
 
-        {/* Card */}
+      
         <div className="bg-slate-900/80 backdrop-blur-md border border-slate-800 p-8 rounded-3xl shadow-2xl">
           <div className="space-y-5">
             <div>
