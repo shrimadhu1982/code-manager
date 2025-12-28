@@ -13,7 +13,7 @@ export default function ExplorePage() {
 
   return (
     <main className="min-h-screen bg-[#020617] text-gray-200 py-16 px-6">
-      {/* Hero & Features Section */}
+     
       <header className="max-w-6xl mx-auto mb-20 text-center">
         <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 rounded-full">
           The Developer Hub
@@ -25,7 +25,7 @@ export default function ExplorePage() {
           A high-performance repository for modern developers. Discover, share, and integrate battle-tested code solutions in seconds.
         </p>
 
-        {/* Features Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-5xl mx-auto">
           {[
             { icon: <Zap className="text-yellow-400" />, title: "Instant Access", desc: "Copy-paste production-ready logic." },
@@ -41,7 +41,7 @@ export default function ExplorePage() {
         </div>
       </header>
 
-      {/* Snippets Grid */}
+     
       <section className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8 border-b border-slate-800 pb-5">
           <h2 className="text-2xl font-bold text-white flex items-center gap-2">
@@ -56,10 +56,10 @@ export default function ExplorePage() {
               key={s._id} 
               className="group relative bg-[#0b1120] rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-all duration-500 flex flex-col overflow-hidden shadow-2xl"
             >
-              {/* Decorative Glow */}
+             
               <div className="absolute -inset-px bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity blur" />
               
-              {/* Window Header */}
+            
               <div className="relative bg-slate-900/80 px-4 py-3 flex items-center justify-between border-b border-slate-800">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-slate-700"></div>
@@ -71,7 +71,6 @@ export default function ExplorePage() {
                 </span>
               </div>
 
-              {/* Content */}
               <div className="relative p-6 flex-grow">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {s.title}
@@ -88,7 +87,7 @@ export default function ExplorePage() {
                 </div>
               </div>
 
-              {/* Action */}
+             
               <div className="relative px-6 py-4 bg-slate-900/30 border-t border-slate-800/50 mt-auto">
                 <button className="group/btn w-full flex items-center justify-center gap-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors">
                   View Snippet 
@@ -99,7 +98,7 @@ export default function ExplorePage() {
           ))}
         </div>
 
-        {/* Empty State */}
+      
         {snippets.length === 0 && (
           <div className="text-center py-32 bg-slate-900/20 rounded-3xl border-2 border-dashed border-slate-800">
             <div className="bg-slate-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">

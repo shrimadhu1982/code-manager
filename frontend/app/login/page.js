@@ -14,7 +14,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    // Validation: Accept any input as long as it's not empty
+    
     if (!username || !password) {
       setError("Please enter both a username and password");
       return;
@@ -22,22 +22,22 @@ export default function LoginPage() {
 
     setIsLoading(true);
 
-    // Simulated login delay to make the UI feel responsive
+   
     setTimeout(() => {
       setIsLoading(false);
       console.log("Logged in as:", username);
-      // Redirects to your explore page
+      
       router.push("/explore"); 
     }, 1200);
   };
 
   return (
     <main className="min-h-screen w-full flex items-center justify-center bg-[#020617] p-4 selection:bg-blue-500/30">
-      {/* Dynamic Background Glow */}
+ 
       <div className="absolute w-80 h-80 bg-blue-600/10 blur-[120px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="relative z-10 w-full max-w-[400px]">
-        {/* Header Section */}
+        
         <div className="flex flex-col items-center mb-10 text-center">
           <div className="p-4 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl mb-4 shadow-2xl shadow-blue-900/40 transform hover:scale-105 transition-transform">
             <LockKeyhole className="text-white" size={32} />
@@ -46,13 +46,13 @@ export default function LoginPage() {
           <p className="text-slate-400 text-sm mt-2 font-medium">Secure access to your code repository</p>
         </div>
 
-        {/* Login Form */}
+      
         <form 
           onSubmit={handleLogin} 
           className="bg-slate-900/40 backdrop-blur-2xl border border-slate-800 p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
           <div className="space-y-6">
-            {/* Error Message Display */}
+            
             {error && (
               <div className="flex items-center gap-2 p-3 text-xs font-semibold bg-red-500/10 border border-red-500/20 text-red-400 rounded-xl animate-in fade-in slide-in-from-top-1">
                 <AlertCircle size={14} />
@@ -60,7 +60,7 @@ export default function LoginPage() {
               </div>
             )}
 
-            {/* Username Field */}
+           
             <div>
               <label className="text-[10px] font-bold text-slate-500 mb-2 block ml-1 uppercase tracking-[0.1em]">
                 Username
@@ -77,7 +77,6 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* Password Field */}
             <div>
               <label className="text-[10px] font-bold text-slate-500 mb-2 block ml-1 uppercase tracking-[0.1em]">
                 Password
@@ -94,7 +93,7 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* Action Button */}
+            
             <button 
               disabled={isLoading}
               type="submit"
@@ -112,7 +111,7 @@ export default function LoginPage() {
           </div>
         </form>
 
-        {/* Footer Note */}
+       
         <p className="text-center mt-10 text-slate-600 text-[11px] font-medium tracking-wide">
           SESSION SECURED VIA AES-256 ENCRYPTION
         </p>

@@ -37,7 +37,7 @@ export default function Page() {
       .catch(() => setSnippets([]));
   }, [router]);
 
-  // 💾 Save snippet logic
+  
   const saveSnippet = async () => {
     if (!code) return;
     setIsSaving(true);
@@ -55,7 +55,7 @@ export default function Page() {
 
       if (res.ok) {
         const newSnippet = await res.json();
-        // Add new snippet to top of list without refreshing
+       
         setSnippets([newSnippet, ...snippets]);
         setCode("");
       } else {
@@ -68,14 +68,14 @@ export default function Page() {
     }
   };
 
-  // 📋 Copy to clipboard function
+ 
   const copyToClipboard = (text, id) => {
     navigator.clipboard.writeText(text);
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  // 🚪 Logout
+
   const handleLogout = () => {
     localStorage.removeItem("loggedIn");
     router.push("/login");
@@ -85,7 +85,7 @@ export default function Page() {
     <main className="min-h-screen bg-[#020617] text-slate-200 p-6 md:p-12 selection:bg-blue-500/30 font-sans">
       <div className="max-w-6xl mx-auto">
         
-        {/* Top Navigation / Header */}
+       
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
           <div className="space-y-1">
             <h1 className="text-4xl font-black text-white flex items-center gap-3 tracking-tighter">
@@ -113,7 +113,7 @@ export default function Page() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
-          {/* Editor Section (Left) */}
+         
           <div className="lg:col-span-7 space-y-4">
             <div className="bg-slate-900/40 backdrop-blur-sm border border-slate-800 rounded-3xl overflow-hidden shadow-2xl shadow-black/50 transition-all hover:border-slate-700/50">
               <div className="bg-slate-900/80 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
@@ -150,7 +150,6 @@ export default function Page() {
             </div>
           </div>
 
-          {/* History Section (Right) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center justify-between px-2">
               <h3 className="text-white font-black text-lg flex items-center gap-2">
